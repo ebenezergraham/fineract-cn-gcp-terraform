@@ -1,5 +1,7 @@
-# fineract-cn-terraform
-Terraform scripts for Fineract CN AWS infrastructure.
+# fineract-cn-gcp-terraform
+Terraform scripts for Fineract CN GCP infrastructure.
+
+This code case forked from openMF/fineract-cn-terraform
 
 Region, project, environment variables should be set correctly in poc/main.tf, poc/terraform.tfvars, poc-tfstate/terraform.tfvars files. Description of variables is in vars.tf file.
 
@@ -38,7 +40,7 @@ terraform destroy
 cd environments/poc-tfstate/
 terraform destroy
 ```
-It might throw error. In that case remove the S3 bucket and DynamoDB table manually.
+It might throw error. In that case remove the Cloud Storage bucket and DynamoDB table manually.
 
 Error cases:
 If `terraform init`, `terraform plan`, `terraform apply` commands do not run, but the infrastructure is destroyed, it might be necessary to manually clean up the environments folder. For this:

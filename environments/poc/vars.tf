@@ -1,5 +1,5 @@
 variable "region" {
-    description = "The AWS region to be used, e.g. eu-central-1."
+    description = "The GCP region to be used, e.g. eu-central-1."
 }
 
 variable "project" {
@@ -34,19 +34,19 @@ variable "infra_instance_type" {
     description = "The EC2 instance type to be used for the infra instance (running Cassandra, Kafka, ZooKeeper, Eureka), e.g. t2.large."
 }
 
-variable "mariadb_instance_type" {
+variable "postgresql_instance_type" {
     description = "The instance type to be used for MariaDB, e.g. db.t2.micro."
 }
 
-variable "mariadb_size" {
+variable "postgresql_size" {
     description = "Space to allocate for the MariaDB database, e.g. 20 (in gigabytes, minimum 20)."
 }
 
-variable "mariadb_admin_user" {
+variable "postgresql_admin_user" {
     description = "Default admin user for the MariaDB installation."
 }
 
-variable "mariadb_admin_password" {
+variable "postgresql_admin_password" {
     description = "Default admin password for the MariaDB installation."
 }
 

@@ -1,4 +1,4 @@
-provider "aws" {
+provider "gcp" {
     region  = "${var.region}"
 }
 
@@ -57,8 +57,8 @@ module "infra" {
     infra_instance_type = "${var.infra_instance_type}"
 }
 
-module "mariadb" {
-    source = "../../modules/mariadb"
+module "postgresql" {
+    source = "../../modules/postgresql"
     project = "${var.project}"
     environment = "${var.environment}"
     vpc_id = "${module.network.vpc_id}"
@@ -66,10 +66,10 @@ module "mariadb" {
     bastion_security_group_id = "${module.bastion.bastion_security_group_id}"
     provisioner_security_group_id = "${module.provisioner.provisioner_security_group_id}"
     infra_security_group_id = "${module.infra.infra_security_group_id}"
-    mariadb_instance_type = "${var.mariadb_instance_type}"
-    mariadb_size = "${var.mariadb_size}"
-    mariadb_admin_user = "${var.mariadb_admin_user}"
-    mariadb_admin_password = "${var.mariadb_admin_password}"
+    postgresql_instance_type = "${var.postgresql_instance_type}"
+    postgresql_size = "${var.postgresql_size}"
+    postgresql_admin_user = "${var.postgresql_admin_user}"
+    postgresql_admin_password = "${var.postgresql_admin_password}"
 }
 
 module "provisioner" {

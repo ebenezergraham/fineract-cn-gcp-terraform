@@ -1,5 +1,9 @@
 variable "region" {
-    description = "The AWS region to be used, e.g. eu-central-1."
+    description = "The GCP region to be used, e.g. eu-central-1."
+}
+
+variable "zone" {
+    description = "The Compute Engine zone to be used, e.g. us-central1-a."
 }
 
 variable "project" {

@@ -27,19 +27,19 @@ variable "subnet_ids" {
     type = "list"
 }
 
-variable "mariadb_instance_type" {
-    description = "The instance type to be used for MariaDB, e.g. db.t2.micro."
+variable "postgresql_instance_type" {
+    description = "The instance type to be used for PostgreSQL, e.g. n2-standard-32"
 }
 
-variable "mariadb_size" {
-    description = "The space to allocate for the MariaDB installation. Minimum is 20 GB."
+variable "postgresql_size" {
+    description = "The space to allocate for the PostgreSQL installation. Minimum is 20 GB."
     default = 20
 }
 
-variable "mariadb_admin_user" {
-    description = "Default admin user for the MariaDB installation."
+variable "postgresql_admin_user" {
+    description = "Default admin user for the PostgreSQL installation."
 }
 
-variable "mariadb_admin_password" {
-    description = "Default admin password fot the MariaDB installation"
+variable "postgresql_admin_password" {
+    description = "Default admin password fot the PostgreSQL installation"
 }

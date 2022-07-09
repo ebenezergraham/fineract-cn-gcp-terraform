@@ -1,5 +1,6 @@
-provider "aws" {
+provider "google" {
     region  = "${var.region}"
+    zone    = "${var.zone}"
 }
 
 module "tfstate-s3" {

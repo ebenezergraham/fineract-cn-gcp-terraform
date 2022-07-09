@@ -46,7 +46,7 @@ output "eureka_listening_url" {
     value = "${module.infra.eureka_listening_url}"
 }
 
-output "mariadb_endpoint" {
+output "postgresql_endpoint" {
     value = "${module.mariadb.mariadb_endpoint}"
 }
 
